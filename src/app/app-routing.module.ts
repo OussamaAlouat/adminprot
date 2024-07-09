@@ -10,6 +10,7 @@ const routes: Routes = [
   // path: '/dashboard PagesRiuting
   // Pages '/auth' AuthRouting
 
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: '**', component: NopagefoundComponent }
 ];
 
