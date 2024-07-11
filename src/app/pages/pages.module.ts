@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ProgressComponent } from './progress/progress.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -24,6 +25,7 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule,
     SharedModule
   ],
