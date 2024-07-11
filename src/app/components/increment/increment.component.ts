@@ -6,6 +6,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./increment.component.css']
 })
 export class IncrementComponent {
+  /**
+   * Para renombrar el input sin cambiar el nombre de la variable
+   * Se introduce el nombre entre el parentesis
+   */
+  // @Input('valor') progress: number = 50;
   @Input() progress: number = 50;
   @Output() valueChanges: EventEmitter<number> = new EventEmitter();
 
