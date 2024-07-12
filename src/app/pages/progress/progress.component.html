@@ -24,7 +24,11 @@
   <div class="col-6">
     <div class="card">
       <div class="card-body">
-        <app-increment [progress]="progress" (valueChanges)="setProgressValue($event)"></app-increment>
+        <app-increment
+          [progress]="progress"
+          (valueChanges)="setProgressValue($event)"
+          [btnClass]="'btn-warning'"
+        ></app-increment>
       </div>
     </div>
   </div>

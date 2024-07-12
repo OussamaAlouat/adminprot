@@ -1,18 +1,24 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-increment',
   templateUrl: './increment.component.html',
   styleUrls: ['./increment.component.css']
 })
-export class IncrementComponent {
+export class IncrementComponent implements OnInit{
   /**
    * Para renombrar el input sin cambiar el nombre de la variable
    * Se introduce el nombre entre el parentesis
    */
   // @Input('valor') progress: number = 50;
   @Input() progress: number = 50;
+  @Input() btnClass: string = 'btn-primary'
   @Output() valueChanges: EventEmitter<number> = new EventEmitter();
+
+
+  ngOnInit(): void {
+    this.btnClass = `btn ${this.btnClass}`
+  }
 
   changeValue(value: number){
     if(this.progress >= 100 && value >=0) {
