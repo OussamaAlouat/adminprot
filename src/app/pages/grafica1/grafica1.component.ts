@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./grafica1.component.css']
 })
 export class Grafica1Component {
+  doughnutChartType: any;
 
 }
